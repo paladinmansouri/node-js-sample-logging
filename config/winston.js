@@ -1,7 +1,7 @@
 const appRoot = require("app-root-path");
 const winston = require("winston");
 
-var options = {
+const options = {
   file: {
     level: "info",
     filename: `${appRoot}/logs/app-${new Date()
@@ -21,7 +21,7 @@ var options = {
   },
 };
 
-var logger = new winston.createLogger({
+const logger = new winston.createLogger({
   transports: [new winston.transports.File(options.file)],
   exitOnError: false, // do not exit on handled exceptions
   
